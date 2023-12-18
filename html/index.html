@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./w3_band/assets/font/fontawesome-free-6.2.1-web/css/all.min.css">
+    <title>Tiện ích</title>
+</head>
+<body>
+    <div id="main">
+        <div class="toolbar">
+            <div class="common info">
+                <i class="fa-solid fa-bars"></i>
+                <button class="nav-toolbar">Thông tin</button> 
+            </div>
+
+            <div class="common icon">
+                <div class="uti_content">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    Tiện ích
+                </div>
+
+                <div class="utilities">
+                    <div class="common_utilities">
+                        <button class="permutation">Hoán vị</button>
+                    </div>
+                    <div class="common_utilities">
+                        <button class="combination">Tổ hợp</button>
+                    </div>
+                    <div class="common_utilities">
+                        <button class="accordant">Chỉnh hợp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="common page">
+                <i class="fa-thin fa-page"></i>
+                <a href="">Trang chủ</a>
+            </div>
+
+            <div class="common calendar" id="calendar-js">
+                <div class="calendar-title" id="calendar-title-js">
+                    <i class="fa-solid fa-calendar"></i>
+                    Calendar
+                </div>
+                <div class="calendar-new">
+                    <div class="header">
+                        <div class="common-new month-picker" id="month-js"></div>
+                        <div class="common-new year-picker" id="year-js"></div>
+                    </div>
+            
+                    <div class="content-new">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                    <th>Sun</th>
+                                  </tr>
+                            </thead>
+                            <tbody id="calendar-body">
+            
+                            </tbody>
+                        </table>
+                    </div>
+            
+                    <div class="footer">
+                        <div class="common-new today">Today</div>
+                        <div class="common-new extra">|</div>
+                        <div class="common-new info-new">
+                            <div class="info-date" id="time-js">
+                                
+                            </div>
+                            <div class="info-time" id="date-js">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-about width margin mg-top">
+            <div class="C_combination">
+                <div class="header-combination">
+                    <h1>Tính tổ hợp chập</h1>
+                    <p>Nhập K và N để tính tổ hợp chập K của N</p>
+                    <div class="label">
+                        K=
+                        <input type="text" id="k_C" class="cal-common">
+                    </div>
+            
+                    <div class="label">
+                        N=
+                        <input type="text" id="n_C" class="cal-common">
+                    </div>
+                    <input type="button" value="Result" id="btn" onclick="onclick_js()">
+                    <div class="css-result" id="result-C"></div>
+                </div>
+        
+                <div class="content">
+                    <h2>Về phép toán tính tổ hợp chập</h2>
+                    <p>Trong Toán học, tổ hợp là cách chọn những phần tử từ một nhóm lớn hơn mà không phân biệt kí tự</p>
+                    <p>Ví dụ cho ba loại quả, một quả táo, một quả cam và một quả lê, có ba cách kết hợp hai loại quả từ tập hợp này: một quả táo và một quả lê; một quả táo và một quả cam; một quả lê và một quả cam.</p>
+                    <p>Công thức tính tổ hợp chập k của n:</p>
+                    <div class="img-combination">
+                        <img src="https://tienichnho.com/assets/images/combination-formula.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="A_accordant">
+                <div class="header-combination">
+                    <h1>Tính chỉnh hợp chập</h1>
+                    <p>Nhập K và N để tính chỉnh hợp chập K của N</p>
+                    <div class="label">
+                        K=
+                        <input type="text" id="k_A" class="cal-common">
+                    </div>
+            
+                    <div class="label">
+                        N=
+                        <input type="text" id="n_A" class="cal-common">
+                    </div>
+                    <input type="button" value="Result" id="btn" onclick="onclick1_js()">
+                    <div class="css-result" id="result-A"></div>
+                </div>
+        
+                <div class="content">
+                    <h2>Về phép toán tính chỉnh hợp chập</h2>
+                    <p>Trong toán học, chỉnh hợp là cách chọn những phần tử từ một nhóm lớn hơn và có phân biệt thứ tự, trái với tổ hợp là không phân biệt thứ tự.</p>
+                    <p>Công thức tính chỉnh hợp chập k của n:</p>
+                    <div class="img-combination">
+                        <img src="https://tienichnho.com/assets/images/permutation-formula.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="P_permutation">
+                <div class="header-combination">
+                    <h1>Tính hoán vị</h1>
+                    <p>Nhập N để tính số hoán vị của N</p>
+                    <div class="label">
+                        N=
+                        <input type="text" id="n" class="cal-common">
+                    </div>
+                    <input type="button" value="Result" id="btn" onclick="onclick2_js()">
+                    <div class="css-result" id="result-P"></div>
+                </div>
+        
+                <div class="content">
+                    <h2>Về phép toán tính giai thừa</h2>
+                    <p>Cho n là một số tự nhiên dương, "n giai thừa", ký hiệu n! là tích của n số tự nhiên dương đầu tiên:</p>
+                    <p>n! = 1x2x3x...x n</p>
+                    <p>Ví dụ: 4! = 1.2.3.4 = 24</p>
+                    <p>Đặc biệt, với n = 0, người ta quy ước 0! = 1.</p>
+                    <p>Giai thừa của N chính là số các hoán vị của một tập hợp có N phần tử.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="info-background">
+            <div class="side-bar">
+                <ul class="side-bar-info">
+                    <li class="info-li"><a href="#member">1. Thành viên</a></li>
+                    <li class="info-li"><a href="#idea">2. Ý tưởng lập trình</a></li>
+                    <li class="info-li"><a href="#doing">3. Cách thực hiện</a></li>
+                    <li class="info-li"><a href="#hosting">4. Hosting</a></li>
+                    <li class="info-li"><a href="#upload">5. Upload nội dung lên web</a></li>
+                    <li class="info-li"><a href="#code">6. Code mẫu</a></li>
+                    <li class="info-li bor-bt"><a href="#learning">7. Tìm hiểu Html Css Javascript</a></li>
+                </ul>
+            </div>
+
+            <div class="content-info">
+                <div id="member">
+                    <h2>1. Thành viên</h2>
+                    <h3>    Sendoh Akira</h3>
+                </div>
+
+                <div id="idea">
+                    <h2>2. Ý tưởng lập trình</h2>
+                    <h3>- Trong các bài toán xác suất, việc thực hiện các phép tính tổ hợp, chỉnh hợp, hoán vị được xem là một dạng được xuất hiện nhiều. Tuy nhiên, việc tính toán nếu dựa trên phương pháp thủ công hay định nghĩa có sẵn thì khá tốn thời gian và phức tạp. Vì vậy, ta có thể tối giản công việc tính toán bằng máy tính. Đó cũng là mục đích chính của việc tạo ra trang web.</h3>
+                    <h3>- Việc xây dựng trang web với yêu cầu đơn giản, dễ nhận ra những công cụ của trang web và giúp người dùng dễ dàng thao tác.</h3>
+                </div>
+
+                <div id="doing">
+                    <h2>3. Cách thực hiện</h2>
+                    <h3>- Tìm hiểu ngôn ngữ HTML- CSS- Javacript</h3>
+                    <h3>- Hình dung giao diện trang web: xác định các chức năng, các công cụ cần thiết</h3>
+                    <h3>- Hoàn thành code và chạy thử trên Visual Studio </h3>
+                    <h3>- Đăng kí tên miền web và web hosting: Upload nội dung cho website và chạy thử website.</h3>            
+                </div>
+
+                <div id="hosting">
+                    <h2>4. Hosting</h2>
+                    <h3>- Vì chỉ test thử code web nên chúng ta có thể sử dụng một hosting miễn phí tại trang web: <a href="#">https://vn.000webhost.com/</a> . Điều này được đưa ra để đảm bảo rằng mọi người đều có thể có cơ hội công bằng tại dịch vụ. Lưu trữ miễn phí là nơi hoàn hảo để học hỏi. Nó cho phép bạn thử nghiệm, viết mã và xây dựng mà không cần đầu tư.</h3>
+                    <img src="./w3_band/assets/img/networking/img-1.png" alt="" class="img-info">
+                    <h3>- Tuy nhiên, khi đã làm web với mục đích bán hàng, blog kiếm tiền online có lợi nhuận thì bạn nên chuẩn bị cho mình một hosting thật tốt bằng cách mua hosting để tăng bảo mật cao hơn, nhiều chức năng hơn, có các tính năng bổ sung, giới hạn dữ liệu và băng thông lớn hơn nhiều. </h3>
+                </div>
+
+                <div id="upload">
+                    <h2>5. Upload nội dung lên web</h2>
+                    <h3>Để bắt đầu với Web Hosting miễn phí thì bạn cần phải đăng kí tài khoản </h3>
+                    <h3>- Khi truy cập vào đường link thì giao diện sẽ xuất hiện như hình. </h3>
+                    <img src="./w3_band/assets/img/networking/img-1.png" alt="" class="img-info">
+                    <h3>-	Chọn Get Started. Xuất hiện các gói để lựa chọn đăng kí khác nhau, với mục đích khác nhau. Nếu muốn đăng kí Hosting miễn phí thì chọn gói Free Web Hosting ( gói này chỉ có thể tạo ra 1 hosting duy nhất và giới hạn dữ liệu của nó cũng sẽ thấp hơn các gói có phí còn lại).</h3>
+                    <img src="./w3_band/assets/img/networking/img-2.png" alt="" class="img-info">
+                    <h3>-	Sau khi chọn gói Free thì yêu cầu đăng kí tài khoản hoặc có thể đăng nhập trực tiếp bằng Gmail,...</h3>
+                    <img src="./w3_band/assets/img/networking/img-3.png" alt="" class="img-info">
+                    <h3>-	Đăng kí thành công sẽ thì giao diện xuất hiện và cho phép chúng ta lựa chọn mục đích làm gì?</h3>
+                    <img src="./w3_band/assets/img/networking/img-4.png" alt="" class="img-info">
+                    <img src="./w3_band/assets/img/networking/img-5.png" alt="" class="img-info">
+                    <img src="./w3_band/assets/img/networking/img-6.png" alt="" class="img-info">
+                    <h3>-	Tạo tên website và mật khẩu cho project, lưu ý tên website không được trùng với những tên website đã tồn tại. </h3>
+                    <img src="./w3_band/assets/img/networking/img-7.png" alt="" class="img-info">
+                    <h3>- Khi tạo tên website thành công, giao diện xuất hiện như hình truy cập quản lí Website để thực hiện các chức năng như xem web, upload, xóa , tạo nội dung,...</h3>
+                    <img src="./w3_band/assets/img/networking/img-8.png" alt="" class="img-info">
+                    <h3>-	Ở giao diện trang Quản lí Website như hình sau, để upload nội dung chúng ta chọn Công cụ > Quản lí File > Tải File lên (Công cụ này cho phép bạn điều hướng, tải lên và xóa các tệp trên máy chủ web của mình.)</h3>
+                    <img src="./w3_band/assets/img/networking/img-9.png" alt="" class="img-info">
+                    <img src="./w3_band/assets/img/networking/img-10.png" alt="" class="img-info">
+                    <h3>-	Truy cập mục  Public_html > Upload File</h3>
+                    <img src="./w3_band/assets/img/networking/img-11.png" alt="" class="img-info">
+                    <img src="./w3_band/assets/img/networking/img-12.png" alt="" class="img-info">
+                    <h3>-	Sau khi Upload code thành công, chúng ta có thể truy cập được vào link trang web với tên miền và hosting đã đăng kí. </h3>
+                    <img src="./w3_band/assets/img/networking/img-13.png" alt="" class="img-info">
+                </div>
+
+                <div id="code">
+                    <h2>6. Code mẫu</h2>
+                    <h3>Dựa vào trang web: <a href="#">https://tienichnho.com/</a> để hình dung giao diện trang web </h3>
+                </div>
+
+                <div id="learning">
+                    <h2>7. Tìm hiểu HTML CSS JAVASCRIPT</h2>
+                    <h3>- Phần lớn học và ứng dụng code dựa trên trang <a href="#">fullstack.edu.vn</a></h3>
+                    <h3>- Ngoài ra, những nội dung chưa hiểu hay không rõ thì tham khảo ở trang W3school, Youtube, StackOverFlow</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagehome-content" id="page-js">
+        <div class="calendar-main" id="calendar-main-js">
+            <div class="header-main">
+                <div class="common-main month-picker-main" id="month-js-main"></div>
+                <div class="common-main year-picker-main" id="year-js-main"></div>
+            </div>
+    
+            <div class="content-main">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                          </tr>
+                    </thead>
+                    <tbody id="calendar-body-main">
+    
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="footer-main">
+                <div class="common-main today-main">Today</div>
+                <div class="common-main extra-main">|</div>
+                <div class="common-main info-main">
+                    <div class="info-date-main" id="time-js-main">
+                        
+                    </div>
+                    <div class="info-time-main" id="date-js-main">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
